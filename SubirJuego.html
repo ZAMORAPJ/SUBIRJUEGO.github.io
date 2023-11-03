@@ -49,7 +49,7 @@
 
 <main>
     <section class="game-info">
-        <form>
+        <form id="gameForm">
             <div class="form-group">
                 <label for="gameTitle" class="form-label">Título del juego:</label>
                 <input type="text" class="form-control" id="gameTitle" placeholder="Ingrese el título del juego">
@@ -81,9 +81,22 @@
                     <!-- Agrega más categorías aquí si es necesario -->
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Subir juego</button>
+            <div id="selectedCategories">Categorías seleccionadas:</div>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Subir juego</button>
         </form>
     </section>
 </main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const gameCategory = document.getElementById("gameCategory");
+        const selectedCategories = document.getElementById("selectedCategories");
+
+        gameCategory.addEventListener("change", function () {
+            const selectedOptions = [...gameCategory.selectedOptions].map(option => option.value);
+            selectedCategories.textContent = "Categorías seleccionadas: " + selectedOptions.join(", ");
+        });
+    });
+</script>
 </body>
 </html>

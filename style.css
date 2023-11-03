@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --Tusk: #fffafa;
+    --main: #1e1e21;
+    --raisin-black-1: #1e1e21; /* Define el color para --raisin-black-1 */
+    --polygon-1: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+    --polygon-2: polygon(0 0, 100% 0%, 82% 100%, 0% 100%);
+    --polygon-3: polygon(0 0, 100% 0%, 100% 100%, 18% 100%);
+}
+
+body {
+    background: var(--Tusk);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 3rem 9%;
+}
+
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    background-color: var(--main);
+    color: #1e1e21;
+    font-size: 1.7rem;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border: 0.1rem solid rgba(0, 0, 0, 0.7);
+}
+
+.btn:hover {
+    background: var(--Tusk);
+    color: var(--main);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    /* Estilos para .header::before y .header::after */
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        width: 115px;
+        height: 20px;
+        background: var(--raisin-black-1);
+        bottom: -17px;
+    }
+
+    &::before {
+        left: 0;
+        clip-path: var(--polygon-2);
+    }
+
+    &::after {
+        right: 0;
+        clip-path: var(--polygon-3);
+    }
+}
+
+.header .logo {
+    font-size: 2.4rem;
+    font-weight: bolder;
+    color: var(--Tusk);
+}
+
+.header .logo i {
+    color: var(--Tusk);
+    padding-right: .5rem;
+}
+
+.header .navbar a {
+    font-size: 1.7rem;
+    color: var(--Tusk);
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.header .icons div {
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: var(--Tusk);
+}
+
+.header .icons div:hover {
+    color: #fff;
+}
+
+#menu-btn {
+    display: none;
+}
+
+  
+
+/* Estilos para la descripcion de juego --------------------------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+}
+
+.game-info {
+    margin-top: 110px; /* Ajusta el valor según cuánto quieras moverlo hacia abajo */
+    background-color: #f5f5f5; /* Color de fondo del cuadro */
+    padding: 20px; /* Espacio interno del cuadro */
+    border-radius: 10px; /* Borde redondeado del cuadro */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
+    text-align: left;
+    width: 80%;
+    height: 100%;
+}
+.descripcion {
+    width: 30%; /* Ancho de la descripción ajustado para ocupar más espacio */
+    margin-top: -280px; /* Ajusta el valor según cuánto quieras moverlo hacia arriba */
+    background-color: #f5f5f5; /* Color de fondo del cuadro */
+    padding: 40px; /* Espacio interno del cuadro */
+    border-radius: 0px; /* Borde redondeado del cuadro */
+    box-shadow: 0 0 10px rgba(60, 60, 60, 0.2); /* Sombra del cuadro */
+    text-align: left;
+    margin-left: 852px; /* Ajusta el valor según cuánto quieras moverlo hacia la derecha */
+    height: 420px; /* Ajusta el valor según la altura deseada */
+}
+
+.download-section {
+    margin-left: 200px; /* Ajusta el valor según cuánto quieras moverlo */
+}
+
+.game-info ul {
+    list-style: none;
+}
+
+.game-info li {
+    margin-bottom: 15px;
+}
+.game-info h2 {
+    margin-bottom: 15px;
+}
+.download-section {
+    text-align: center;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.download-button:hover {
+    background-color: #0056b3; /* Cambia el color al pasar el mouse */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agrega una sombra al pasar el mouse */
+}
+
+
+.game-info img {
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-right: 50px; /* Añade margen derecho para separar el texto */
+    max-width: 45%; /* Establece el ancho máximo de la imagen al 50% del contenedor */
+}
+
+@media (max-width: 768px) {
+    .game-info {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        padding: 10px; /* Reduce el espacio interno */
+    }
+
+    .descripcion {
+        width: 100%; /* Ocupar todo el ancho disponible */
+        margin: 20px auto; /* Centrar verticalmente */
+    }
+}

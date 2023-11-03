@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+    <style>
+        /* Estilo para separar los campos del formulario */
+        .form-group {
+            margin-bottom: 10px; /* Agrega un margen inferior de 10px entre los campos */
+        }
+
+        /* Estilo para hacer más grandes los títulos */
+        .form-label {
+            font-size: 15px; /* Tamaño de fuente personalizado para los títulos */
+            display: block;
+        }
+
+        /* Estilo para hacer más grandes los cuadros de texto */
+        .form-control {
+            width: 100%; /* Ancho al 100% del contenedor */
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <a href="#" class="logo"> <i class="fas fa-cubes"></i> WΔKΔNĐΔ. </a>
+
+    <nav class="navbar">
+        <a href="#">Inicio</a>
+        <a href="#">Servicio</a>
+        <a href="#">Producto</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <div class="icons">
+        <div id="mobile-menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-save"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+    </div>
+
+</header>
+
+<main>
+    <section class="game-info">
+        <form>
+            <div class="form-group">
+                <label for="gameTitle" class="form-label">Título del juego:</label>
+                <input type="text" class="form-control" id="gameTitle" placeholder="Ingrese el título del juego">
+            </div>
+            <div class="form-group">
+                <label for="gameImage" class="form-label">Subir imagen:</label>
+                <input type="file" class="form-control" id="gameImage">
+            </div>
+            <div class="form-group">
+                <label for="gameRequirements" class="form-label">Requisitos del juego:</label>
+                <textarea class="form-control" id="gameRequirements" rows="5" placeholder="Ingrese los requisitos del juego"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="gameDescription" class="form-label">Descripción del juego:</label>
+                <textarea class="form-control" id="gameDescription" rows="5" placeholder="Ingrese la descripción del juego"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="gameDownload" class="form-label">Descargable del juego:</label>
+                <input type="file" class="form-control" id="gameDownload">
+            </div>
+            <div class="form-group">
+                <label for="gameCategory" class="form-label">Categoría del juego:</label>
+                <select multiple class="form-control" id="gameCategory">
+                    <option value="Aventura">Aventura</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Estrategia">Estrategia</option>
+                    <option value="Deportes">Deportes</option>
+                    <option value="Terror">Terror</option>
+                    <!-- Agrega más categorías aquí si es necesario -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Subir juego</button>
+        </form>
+    </section>
+</main>
+</body>
+</html>
